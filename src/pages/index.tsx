@@ -3,16 +3,41 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
+import heroImg from '../../public/assets/hero.svg'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <>
+    <div className={styles.container}>
       <Head>
         <title>Tarefas</title>
       </Head>
 
-      <h1>Tarefas</h1>
-    </>
+      <main className={styles.main}>
+        <div className={styles.logoContent}>
+          <Image
+            className={styles.hero}
+            src={heroImg}
+            alt="Logo Minhas Tarefas"
+            priority
+          />
+        </div>
+        <h1 className={styles.title}>
+          Sistema feito para você organizar
+          <br /> seus estudos e tarefas
+        </h1>
+
+        <div className={styles.infoContent}>
+          <section className={styles.box}>
+            <span>+12 posts</span>
+          </section>
+
+          <section className={styles.box}>
+            <span>+90 comentários</span>
+          </section>
+        </div>
+      </main>
+    </div>
   )
 }
