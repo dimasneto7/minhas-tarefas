@@ -9,7 +9,7 @@ export default function Header() {
     <header className={styles.header}>
       <section className={styles.content}>
         <nav className={styles.nav}>
-          <Link href="">
+          <Link href="/">
             <h1 className={styles.logo}>
               <span>Minhas</span> Tarefas
             </h1>
